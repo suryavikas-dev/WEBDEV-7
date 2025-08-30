@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1c1c1c;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 40px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-left input {
+      padding: 7px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .nav-right a {
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 20% 55% 25%;
+      gap: 15px;
+      margin: 20px;
+    }
+
+    .sidebar-left, .sidebar-right {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .profile-card, .page-card, .news-card, .ad-card {
+      background: #2c2c2c;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 25px;
+      width: 25px;
+      border-radius: 10px;
+    }
+
+    .company-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .feed {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .create-post {
+      display: flex;
+      flex-direction: column;
+      background: #2c2c2c;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .create-post input {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      width: 100%;
+    }
+
+    .post-options button {
+      margin-right: 10px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 8px;
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .post {
+      background: #2c2c2c;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .small-profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .post-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #444;
+    }
+
+    .post-actions button {
+      background: none;
+      border: none;
+      color: #bbb;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="logo.jpg" alt="Logo" class="logo">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="nav-right">
+      <a href="#">Home</a>
+      <a href="#">My Network</a>
+      <a href="#">Jobs</a>
+      <a href="#">Messaging</a>
+      <a href="#">Notifications</a>
+      <a href="#">Me</a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <aside class="sidebar-left">
+      <div class="profile-card">
+        <img src="logo.jpg  " alt="Profile" class="profile-img">
+        <h5>Surya Vikas</h5>
+        <p>Profile viewers: <b>402</b></p>
+        <p>Post impressions: <b>733</b></p>
+      </div>
+
+
+    </aside>
+
+    <main class="feed">
+      <div class="create-post">
+        <img src="logo.jpg" class="small-profile">
+        <input type="text" placeholder="Start a post">
+        <div class="post-options">
+          <button>Video</button>
+          <button>Photo</button>
+          <button>Write</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="logo.jpg" class="small-profile">
+          <div>
+            <h4>Anjana Reddy</h4>
+            <p>Data Analyst at Infosys • 4m ago</p>
+          </div>
+        </div>
+        <p>✨ Just completed a 5-day Power BI workshop and created my first interactive dashboard. Excited to apply these skills in real projects!</p>
+        <img src="nature1.jpg" class="post-img">
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+          <button>📩 Send</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="logo.jpg" class="small-profile">
+          <div>
+            <h4>Rahul Sharma</h4>
+            <p>Software Engineer at Google • 1h ago</p>
+          </div>
+        </div>
+        <p>🚀 Excited to announce that our team just launched a new AI-powered feature in Google Photos. It’s been an amazing journey!</p>
+        <img src="nature2.jpeg" class="post-img">
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+          <button>📩 Send</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img src="logo.jpg" class="small-profile">
+          <div>
+            <h4>Priya Menon</h4>
+            <p>HR Manager at Deloitte • 3h ago</p>
+          </div>
+        </div>
+        <p>💼 We are hiring fresh graduates for our consulting division. Great opportunity for those passionate about problem-solving!</p>
+        <img src="nature1.jpg" class="post-img">
+        <div class="post-actions">
+          <button>👍 Like</button>
+          <button>💬 Comment</button>
+          <button>🔗 Share</button>
+          <button>📩 Send</button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar-right">
+      <div class="news-card">
+        <h4>LinkedIn News</h4>
+        <ul>
+          <li>Reliance partners with Meta, Google for 5G rollout</li>
+          <li>AI talent demand at all-time high</li>
+          <li>India's GDP projected at 6.8% for FY26</li>
+        </ul>
+      </div>
+      <div class="ad-card">
+        <h4>Promoted</h4>
+        <img src="image.jpg" alt="Ad" style="width:100%; border-radius:10px;">
+        <p>Upgrade your skills with Coursera – Enroll today!</p>
+      </div>
+    </aside>
+  </div>
+
+</body>
+</html>
